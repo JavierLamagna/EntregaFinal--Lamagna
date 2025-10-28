@@ -1,57 +1,51 @@
-function carritoDeCompras() {
-    const productos = [
-        { id: 1, nombre: "Proteina", precio: 20000 },
-        { id: 2, nombre: "Creatina", precio: 16000 },
-        { id: 3, nombre: "Bcaa", precio: 7000 },
-        { id: 4, nombre: "Multivitaminico", precio: 12000 },
-    ];
+const proteinasArray = [
+  { id: 1, nombre: "Whey Protein Ena Sport", precio: 55700 },
+  { id: 2, nombre: "Mutant mass Star Nutrition", precio: 67900 },
+  { id: 3, nombre: "Creatina monohidrato Gentech", precio: 53500 },
+  { id: 4, nombre: "Bcaa Universal", precio: 52500 },
+];
 
-    const carrito = [];
-    const IVA = 0.21;
-    let total = 0;
-    let continuar = true;
-
-    while (continuar) {
-        // Mostrar menú
-        let menu = "Seleccione un producto (o 0 para salir):\n";
-        for (let prod of productos) {
-            menu += `${prod.id}. ${prod.nombre} - $${prod.precio}\n`;
-        }
-
-        const opcion = parseInt(prompt(menu));
-
-        if (opcion === 0 || isNaN(opcion)) {
-            continuar = false;
-            break;
-        }
-
-        const productoSeleccionado = productos.find(function (producto) {
-            return producto.id === opcion;
-        });
-
-        //cargar producto
-        if (productoSeleccionado) {
-            carrito.push(productoSeleccionado);
-            total += productoSeleccionado.precio;
-            alert(`${productoSeleccionado.nombre} agregado al carrito.`);
-        } else {
-            alert("Opción inválida, intente nuevamente.");
-        }
-    }
-
-    if (carrito.length === 0) {
-        alert("No compraste nada.");
-        return;
-    }
-
-    const totalConIVA = total + total * IVA;
-
-    // Mostrar resumen
-    let lista = carrito.map(p => `${p.nombre} - $${p.precio}`).join("\n");
-    alert(
-        "Productos comprados:\n" + lista +
-        `\nTotal con IVA (21%): $${totalConIVA}`
-    );
+// Función para calcular el total
+function calcularTotal(arrayProductos) {
+  return arrayProductos.reduce((acumulador, producto) => acumulador + producto.precio, 0);
 }
 
-carritoDeCompras();
+// Función que carga los productos en el DOM
+const cargarDOM = () => {
+  const productos = document.getElementById("productos-container");
+  productos.innerHTML = ""; // Limpiamos por si se vuelve a llamar
+
+  proteinasArray.forEach((producto) => {
+    const divProducto = document.createElement("div");
+    divProducto.innerHTML = `
+          <div class="Producto-agregar">
+          <div>
+         <small>Titulo</small>
+         <h3>${producto.nombre}</h3>
+         </div>
+         <div>
+         <small>Precio</small>
+         <p>$${producto.precio}</p>
+         </div>
+         <div>
+         <small>Cantidad</small>
+         <p>1</p>
+         </div>
+         <button class="boton-eliminar"><i class="bi bi-trash3-fill"></i></button>
+      </div>
+    `;
+
+    productos.appendChild(divProducto);
+  });
+
+  // Calculamos y mostramos el total al final
+  const total = calcularTotal(proteinasArray);
+  const totalDiv = document.createElement("div");
+  totalDiv.classList.add("total-carrito");
+  totalDiv.innerHTML = `<h3>Total: $${total}</h3>`;
+
+  productos.appendChild(totalDiv);
+};
+
+// Ejecutamos al cargar
+cargarDOM();
