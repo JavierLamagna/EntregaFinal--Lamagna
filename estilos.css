@@ -156,22 +156,15 @@ p {
 
 .Producto-agregar {
     display: flex;
-<<<<<<< HEAD
     justify-content: space-around;
-=======
-    justify-content: space-between;
->>>>>>> 036c10725d3c977ea899e58cb0b888416ff353e5
     align-items: center;
     padding: 10px;
 }
 
-<<<<<<< HEAD
 .carrito-imagen {
     width: 10%;
 }
 
-=======
->>>>>>> 036c10725d3c977ea899e58cb0b888416ff353e5
 .boton-eliminar {
     border: 0;
     background-color: transparent;
@@ -185,11 +178,7 @@ p {
     padding-bottom: 30px;
 }
 
-<<<<<<< HEAD
 #fin-compra {
-=======
-.fin-compra {
->>>>>>> 036c10725d3c977ea899e58cb0b888416ff353e5
     font-family: "BBH Sans Bartle", sans-serif;
     font-size: 10px;
     background-color: blueviolet;
