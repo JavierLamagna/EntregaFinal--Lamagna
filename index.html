@@ -1,12 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    </style>
+
 </head>
+
 <body>
-    <h1>Pre entrega N° 1</h1>
+
+    <aside class="menu">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="titulo">
+                    <h1 class="navbar-brand">WorldSupplements</h1>
+                    <small>Tenemos todo para mejorar tu entrenamiento</small>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Footer">Redes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/carrito.html">Carrito</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#Proteinas">Proteinas</a></li>
+                                <li><a class="dropdown-item" href="#Mutant-mass">Mutant-mass</a></li>
+                                <li><a class="dropdown-item" href="#Creatinas">Creatinas</a></li>
+                                <li><a class="dropdown-item" href="#Bcaa">Bcaa</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="productos">
+        <h3 id="Proteinas">Proteinas</h3>
+
+        <section class="conteiner-producto">
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/proteina-1.webp" alt="">
+                <h4 class="producto-titulo">Whey Protein Ena Sport</h4>
+                <p>Pote 930gr varios sabores</p>
+                <p class="producto-precio">$55.700</p>
+                <small class="producto-pagos">6 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-proteina1"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/proteina-2.webp" alt="">
+                <h4 class="producto-titulo">Whey Protein Raptor</h4>
+                <p>Pote 930gr varios sabores</p>
+                <p class="producto-precio">$38.000</p>
+                <small class="producto-pagos">6 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-proteina2"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/proteina-3.webp" alt="">
+                <h4 class="producto-titulo">Whey Protein Avance</h4>
+                <p>Pote 930gr varios sabores</p>
+                <p class="producto-precio">$32.600</p>
+                <small class="producto-pagos">6 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-proteina3"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/proteina-4.webp" alt="">
+                <h4 class="producto-titulo">Tri Protein Ultratech</h4>
+                <p>Pote 930gr varios sabores</p>
+                <p class="producto-precio">$29.800</p>
+                <small class="producto-pagos">6 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-proteina4"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+        </section>
+
+        <h3 id="Mutant-mass">Mutant mass</h3>
+
+        <section class="conteiner-producto">
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/mutant-mass-1.png" alt="">
+                <h4 class="producto-titulo">Mutant mass Star Nutrition</h4>
+                <p>Pote 908gr varios sabores</p>
+                <p class="producto-precio">$67.900</p>
+                <small class="producto-pagos">9 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-mutant1"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/mutant-mass-2.webp" alt="">
+                <h4 class="producto-titulo">Mutant mass Evolution</h4>
+                <p>Pote 908gr varios sabores</p>
+                <p class="producto-precio">$44.500</p>
+                <small class="producto-pagos">9 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-mutant2"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/mutant-mass-3.webp" alt="">
+                <h4 class="producto-titulo">Ultra mas Ena Sport</h4>
+                <p>Pote 908gr varios sabores</p>
+                <p class="producto-precio">$38.000</p>
+                <small class="producto-pagos">9 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-mutant3"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/mutant-mass-4.jpg" alt="">
+                <h4 class="producto-titulo">Mutant Mass Extreme Gainer</h4>
+                <p>Pote 908gr varios sabores</p>
+                <p class="producto-precio">$35.700</p>
+                <small class="producto-pagos">9 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-mutant4"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+        </section>
+
+        <h3 id="Creatinas">Creatina</h3>
+
+        <section class="conteiner-producto">
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/creatina-1.webp" alt="">
+                <h4 class="producto-titulo">Creatina monohidrato Ena Sport</h4>
+                <p>Pote 300gr sin sabor</p>
+                <p class="producto-precio">$36.900</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-creatina1"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/creatina-2.webp" alt="">
+                <h4 class="producto-titulo">Creatina monohidrato Ultratech</h4>
+                <p>Pote 1kg sin sabor</p>
+                <p class="producto-precio">$105.000</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-creatina2"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/creatina-3.jpg" alt="">
+                <h4 class="producto-titulo">Creatina monohidrato Gentech</h4>
+                <p>Pote 500gr sin sabor</p>
+                <p class="producto-precio">$53.500</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-creatina3"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/creatina-4.jpg" alt="">
+                <h4 class="producto-titulo">Creatina monohidrato Teingro</h4>
+                <p>Pote 300gr sin sabor</p>
+                <p class="producto-precio">$28.600</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-creatina4"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+        </section>
+
+        <h3 id="Bcaa">Bcaa</h3>
+
+        <section class="conteiner-producto">
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/bcaa-1.webp" alt="">
+                <h4 class="producto-titulo">Bcaa Ena Sport</h4>
+                <p>Pote 120caps sin sabor</p>
+                <p class="producto-precio">$17.100</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-bcaa1"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/bcaa-2.webp" alt="">
+                <h4 class="producto-titulo">Bcaa Avance</h4>
+                <p>Pote 120caps sin sabor</p>
+                <p class="producto-precio">$12.000</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-bcaa2"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/bcaa-3.webp" alt="">
+                <h4 class="producto-titulo">Mtor Bcaa Star Nutrition</h4>
+                <p>Pote 270gr sabor frutos rojos</p>
+                <p class="producto-precio">$36.500</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm"id="boton-bcaa3"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+            <div class="conteiner-item">
+                <img class="producto-imagen" src="images/bcaa-4.webp" alt="">
+                <h4 class="producto-titulo">Bcaa Universal</h4>
+                <p>Pote 110caps sin sabor</p>
+                <p class="producto-precio">$52.500</p>
+                <small class="producto-pagos">3 cuotas sin interes<br>
+                    Envio gratis a todo el pais</small>
+                <button type="button" class="btn btn-primary btn-sm">Comprar ahora</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="boton-bcaa4"><i class="bi bi-cart-plus-fill">Agregar al
+                        carrito</i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="Footer">
+        <section class="redes">
+            <button class="boton-redes"><i class="bi bi-facebook">Facebook</i></button>
+            <button class="boton-redes"><i class="bi bi-instagram">Instagram</i></button>
+            <button class="boton-redes"><i class="bi bi-telegram">Telegram</i></button>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+    <script src="./pages/carritojs.js"></script>
+    <script src="./pages/mutant-mass.js"></script>
+    <script src="./pages/creatina.js"></script>
+    <script src="./pages/bcaa.js"></script>
+    
 </body>
+
 </html>

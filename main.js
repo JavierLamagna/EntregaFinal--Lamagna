@@ -1,57 +1,29 @@
-function carritoDeCompras() {
-    const productos = [
-        { id: 1, nombre: "Proteina", precio: 20000 },
-        { id: 2, nombre: "Creatina", precio: 16000 },
-        { id: 3, nombre: "Bcaa", precio: 7000 },
-        { id: 4, nombre: "Multivitaminico", precio: 12000 },
-    ];
+const proteinasArray = [
+  { id: 1, imagen: "../images/proteina-1.webp", nombre: "Whey Protein Ena Sport", precio: 55700 },
+  { id: 2, imagen: "../images/proteina-2.webp", nombre: "Whey Protein Raptor", precio: 38000 },
+  { id: 3, imagen: "../images/proteina-3.webp", nombre: "Whey Protein Avance", precio: 32600 },
+  { id: 4, imagen: "../images/proteina-4.webp", nombre: "Tri Protein Ultratech", precio: 29800 },
+];
 
-    const carrito = [];
-    const IVA = 0.21;
-    let total = 0;
-    let continuar = true;
+const carritoProteina = JSON.parse(localStorage.getItem("carritoProteina")) || [];
 
-    while (continuar) {
-        // Mostrar menú
-        let menu = "Seleccione un producto (o 0 para salir):\n";
-        for (let prod of productos) {
-            menu += `${prod.id}. ${prod.nombre} - $${prod.precio}\n`;
-        }
+// Selecciona todos los botones que tengan id que empiece con "boton-proteina"
+const botones = document.querySelectorAll("[id^='boton-proteina']");
 
-        const opcion = parseInt(prompt(menu));
+botones.forEach(boton => {
+  boton.addEventListener("click", () => {
+    // Extrae el número del id, ej: "boton-proteina3" → 3
+    const idProducto = parseInt(boton.id.replace("boton-proteina", ""));
+    const productoEncontrado = proteinasArray.find(p => p.id === idProducto);
 
-        if (opcion === 0 || isNaN(opcion)) {
-            continuar = false;
-            break;
-        }
-
-        const productoSeleccionado = productos.find(function (producto) {
-            return producto.id === opcion;
-        });
-
-        //cargar producto
-        if (productoSeleccionado) {
-            carrito.push(productoSeleccionado);
-            total += productoSeleccionado.precio;
-            alert(`${productoSeleccionado.nombre} agregado al carrito.`);
-        } else {
-            alert("Opción inválida, intente nuevamente.");
-        }
+    if (productoEncontrado) {
+      carritoProteina.push(productoEncontrado);
+      localStorage.setItem("carritoProteina", JSON.stringify(carritoProteina));
+      Swal.fire({
+        title: `Se agregó "${productoEncontrado.nombre}" al carrito`,
+        icon: "success",
+        draggable: true
+      });
     }
-
-    if (carrito.length === 0) {
-        alert("No compraste nada.");
-        return;
-    }
-
-    const totalConIVA = total + total * IVA;
-
-    // Mostrar resumen
-    let lista = carrito.map(p => `${p.nombre} - $${p.precio}`).join("\n");
-    alert(
-        "Productos comprados:\n" + lista +
-        `\nTotal con IVA (21%): $${totalConIVA}`
-    );
-}
-
-carritoDeCompras();
+  });
+});

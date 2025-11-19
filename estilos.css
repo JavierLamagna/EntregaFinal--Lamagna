@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#Proteinas {
+    font-family: "BBH Sans Bartle", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+#Mutant-mass {
+    font-family: "BBH Sans Bartle", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+#Creatinas {
+    font-family: "BBH Sans Bartle", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+#Bcaa {
+    font-family: "BBH Sans Bartle", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.bg-body-tertiary {
+    background-image: url(images/Gym.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.titulo {
+    display: block;
+    color: blueviolet;
+    font-family: "BBH Sans Bartle", sans-serif;
+}
+ small {
+    font-size: 15px;
+ }
+.navbar-brand {
+    font-family: "BBH Sans Bartle", sans-serif !important;
+    color: blanchedalmond !important;
+    font-size: 30px !important;
+    padding: 50px;
+}
+
+.nav-link {
+    color: blanchedalmond !important;
+}
+
+.navbar-collapse {
+    display: flex !important;
+    justify-content: right !important;
+    font-size: 20px;
+}
+
+.container-fluid {
+    padding: 50px;
+}
+h4 {
+    font-family: "BBH Sans Bartle", sans-serif !important;
+    background-color: blueviolet;
+    border-radius: 5px;
+    color: black;
+    font-size: 10px !important;
+    padding: 15px;
+    margin: 15px;
+}
+
+p {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 20px;
+}
+
+.producto-pagos {
+    font-family: "Funnel Sans", sans-serif;
+    font-size: 15px;
+    color: green;
+}
+
+.conteiner-producto {
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteiner-item {
+    border: 3px solid black;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 15px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+.producto-imagen {
+
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 1s;
+}
+
+.producto-imagen:hover {
+    transform: scale(0.8);
+}
+
+.boton-comprar {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    margin: 10px !important;
+}
+
+.redes {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.boton-redes {
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-size: 10px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* CARRITO */
+
+.Producto-agregar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.carrito-imagen {
+    width: 10%;
+}
+
+.boton-eliminar {
+    border: 0;
+    background-color: transparent;
+    color: rgb(182, 7, 7);
+}
+
+.Boton-comprar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+#fin-compra {
+    font-family: "BBH Sans Bartle", sans-serif;
+    font-size: 10px;
+    background-color: blueviolet;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 20px;
+}
